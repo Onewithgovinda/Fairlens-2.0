@@ -1,0 +1,28 @@
+{
+  "best_parameters": {
+    "classifier__n_estimators": 200,
+    "classifier__min_samples_split": 5,
+    "classifier__min_samples_leaf": 1,
+    "classifier__max_features": 0.7,
+    "classifier__max_depth": 25,
+    "classifier__criterion": "entropy"
+  },
+  "best_cross_validation_f1": 0.9856225751078943,
+  "test_metrics": {
+    "accuracy": 0.9847775175644028,
+    "precision_approved": 0.9868421052631579,
+    "recall_approved": 0.9887005649717514,
+    "f1_approved": 0.9877704609595485,
+    "roc_auc": 0.998577367313265
+  },
+  "confusion_matrix": [
+    [
+      316,
+      7
+    ],
+    [
+      6,
+      525
+    ]
+  ]
+}

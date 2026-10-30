@@ -1,0 +1,123 @@
+{
+  "dataset_rows": 4269,
+  "training_rows": 3415,
+  "validation_rows": 854,
+  "test_rows": 854,
+  "target_column": "loan_status",
+  "model_name": "Random Forest",
+  "feature_columns": [
+    "no_of_dependents",
+    "education",
+    "self_employed",
+    "income_annum",
+    "loan_amount",
+    "loan_term",
+    "cibil_score",
+    "residential_assets_value",
+    "commercial_assets_value",
+    "luxury_assets_value",
+    "bank_asset_value"
+  ],
+  "numeric_columns": [
+    "no_of_dependents",
+    "income_annum",
+    "loan_amount",
+    "loan_term",
+    "cibil_score",
+    "residential_assets_value",
+    "commercial_assets_value",
+    "luxury_assets_value",
+    "bank_asset_value"
+  ],
+  "categorical_columns": [
+    "education",
+    "self_employed"
+  ],
+  "category_values": {
+    "education": [
+      " Graduate",
+      " Not Graduate"
+    ],
+    "self_employed": [
+      " Yes",
+      " No"
+    ]
+  },
+  "form_defaults": {
+    "no_of_dependents": 3.0,
+    "education": " Graduate",
+    "self_employed": " Yes",
+    "income_annum": 5100000.0,
+    "loan_amount": 14500000.0,
+    "loan_term": 10.0,
+    "cibil_score": 600.0,
+    "residential_assets_value": 5600000.0,
+    "commercial_assets_value": 3700000.0,
+    "luxury_assets_value": 14600000.0,
+    "bank_asset_value": 4600000.0
+  },
+  "metrics": {
+    "accuracy": 0.9765807962529274,
+    "precision_approved": 0.9848197343453511,
+    "recall_approved": 0.9774011299435028,
+    "f1_approved": 0.9810964083175804,
+    "roc_auc": 0.9987231288590369
+  },
+  "model_comparison": [
+    {
+      "model": "Logistic Regression baseline",
+      "validation_accuracy": 0.9250585480093677,
+      "validation_precision_approved": 0.960552268244576,
+      "validation_recall_approved": 0.9171374764595104,
+      "validation_f1_approved": 0.9383429672447013,
+      "validation_roc_auc": 0.970247153277011
+    },
+    {
+      "model": "Random Forest",
+      "validation_accuracy": 0.9707259953161592,
+      "validation_precision_approved": 0.9773584905660377,
+      "validation_recall_approved": 0.975517890772128,
+      "validation_f1_approved": 0.9764373232799246,
+      "validation_roc_auc": 0.9973529703287798
+    }
+  ],
+  "confusion_matrix": [
+    [
+      315,
+      8
+    ],
+    [
+      12,
+      519
+    ]
+  ],
+  "classification_report": {
+    "Rejected": {
+      "precision": 0.963302752293578,
+      "recall": 0.9752321981424149,
+      "f1-score": 0.9692307692307692,
+      "support": 323.0
+    },
+    "Approved": {
+      "precision": 0.9848197343453511,
+      "recall": 0.9774011299435028,
+      "f1-score": 0.9810964083175804,
+      "support": 531.0
+    },
+    "accuracy": 0.9765807962529274,
+    "macro avg": {
+      "precision": 0.9740612433194645,
+      "recall": 0.9763166640429588,
+      "f1-score": 0.9751635887741747,
+      "support": 854.0
+    },
+    "weighted avg": {
+      "precision": 0.976681578370266,
+      "recall": 0.9765807962529274,
+      "f1-score": 0.9766085846348637,
+      "support": 854.0
+    }
+  },
+  "random_state": 42,
+  "test_size": 0.2
+}
